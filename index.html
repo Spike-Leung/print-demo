@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+  <title>Print demo</title>
+  <style>
+    table {
+        width: 100%;
+        table-layout: fixed;
+        text-align: center;
+        /* table will start at new page */
+        break-inside: avoid-page;
+        border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid gray;
+    }
+
+    .second-lorem {
+        font-weight: bold;
+    }
+
+    .footer {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+    }
+
+    @media print {
+        * {
+          font-size: 18px;
+        }
+
+        #print-btn {
+            display: none;
+        }
+
+        .lorem {
+            /* show at least 10 lines in next page top */
+            /* it means at least how many lines should bring to next page when page break */
+            widows: 40;
+            /* Forces a page break right after .lorem */
+            break-after: page;
+        }
+
+        .third-lorem {
+            /* break when need */
+            /* break-before: avoid-page; */
+            /* force break all to next page*/
+            break-before: page;
+        }
+
+        a:after {
+            content: "  (" attr(href) ")";
+        }
+
+        /* remove large area black background */
+        img.dark {
+            filter: invert(100%) hue-rotate(180deg) brightness(120%) contrast(150%);
+        }
+    }
+
+    @page {
+        /* pecifies the target size and orientation of the page box's containing block */
+        size: a4;
+        /* make it landscape */
+        /* size: a4 landscape; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="footer">@copyleft since 2023</div>
+  <a href="https://taxodium.ink/post/about-page-print">关于页面打印</a>
+
+  <button id="print-btn">print it</button>
+
+  <p class="lorem">
+    Magna diam placerat accusam lorem invidunt congue illum sit dolor ut duo lorem. Rebum amet imperdiet invidunt clita delenit vero sea dolores blandit illum exerci diam ullamcorper mazim justo ut. Nulla magna rebum cum. Et delenit voluptua sed et nonumy ex clita. Eos minim takimata vulputate at iriure stet ipsum labore.
+
+    Nonumy amet voluptua nulla eirmod. Voluptua et lobortis esse. Autem kasd elitr eirmod ullamcorper sanctus clita. Amet eirmod dolores nonumy nonumy feugait duo est consetetur kasd velit et dolor. Nulla rebum accusam tempor nibh diam. Stet ipsum ea. Zzril dolore amet amet invidunt. Sea sed dolor. Imperdiet sed congue aliquam. Accusam labore dolore eos duo sed voluptua sit ipsum clita duo wisi congue aliquyam sed dolore sed.
+
+    Exerci tincidunt et consetetur sea at erat eirmod ipsum duo dolor iriure dolor amet accusam. Kasd ea ipsum autem molestie eirmod magna sadipscing et justo diam gubergren ipsum. Diam dolores vulputate kasd rebum duis lorem nonumy sed ipsum eirmod lorem lobortis. Sanctus et amet erat diam sed labore vero dolore duo magna qui kasd erat gubergren eirmod nonumy. Accusam ipsum quis magna blandit voluptua ut vero tempor accusam accumsan lorem gubergren illum. Duis invidunt rebum sea duo praesent lorem dolores lorem labore accusam molestie augue consectetuer et. Dolor gubergren tempor sed et vulputate voluptua ipsum ut amet diam elitr stet amet et sea justo est stet. Dolor magna est. Ipsum dignissim lorem et sit et sed.
+
+    Elitr lobortis hendrerit et duis erat et kasd kasd et ipsum magna erat lorem ea duo rebum et elitr. Diam dolore et tincidunt labore amet et nonumy. Accusam consetetur elitr aliquyam et et veniam sit praesent dignissim voluptua. Dolore tempor elitr dolor hendrerit mazim dolores. Clita dolore dolor lorem aliquam diam kasd amet ea dolor ipsum kasd sea veniam possim dolor sed. Ipsum et aliquam facer dolor ad kasd et erat sit nihil et stet accusam sit eirmod ipsum. Amet elitr at esse gubergren at dolore amet eu ea quod dolor wisi amet. Diam velit lorem. Accusam ut magna dolores imperdiet eu ea nonumy veniam sed aliquip. Justo veniam magna nihil ut placerat vulputate sea clita kasd invidunt vel amet ipsum consetetur. Nisl commodo at eu amet veniam et ut ex voluptua. Sanctus consetetur volutpat duo et amet vulputate vero suscipit dolores wisi nonumy vel dolor et dolore te lorem duo. Lorem invidunt invidunt ex rebum lorem vel placerat laoreet sit ut consetetur. Exerci illum ad diam sadipscing ipsum ut no vero cum dolor eirmod ullamcorper sea delenit diam diam ut et. Suscipit et lorem nonummy dolores est aliquyam enim amet sed ad in odio erat vero. Magna takimata soluta sit dolor ut at enim.
+
+    Et voluptua est delenit rebum exerci ipsum hendrerit. Et tincidunt ut gubergren tempor et dolor te no diam esse ut amet. At nulla hendrerit ipsum feugiat duo magna sea et eirmod et nobis eirmod gubergren lobortis labore est facer sed. Ad clita amet dolor ea takimata amet magna amet vero aliquam no. Et rebum lorem sadipscing sanctus in at eirmod dolore nam zzril. Aliquip lobortis tation diam vero ut. Takimata invidunt sanctus rebum lobortis sadipscing odio et praesent lorem no minim justo sanctus at et dolor ut. Praesent dolor lorem diam amet eos quis eos dolore dolor. In consetetur mazim accusam takimata sed esse ipsum stet dolores adipiscing iusto eros eirmod eos consetetur. Blandit facilisis nonumy augue cum rebum velit. Ex dolor suscipit gubergren diam lorem kasd justo elitr elitr elit et dolores et labore aliquyam ad. Vel et consetetur stet ut sed erat dolores dignissim et rebum facilisis eos eu. Stet nonumy sed erat eirmod ut dolor magna lobortis labore sit vero vero rebum lobortis dolore sea dolor. Nonumy soluta diam in exerci feugiat magna et labore consetetur eirmod stet invidunt eirmod stet. Kasd takimata dolor tincidunt ipsum dolor consetetur diam sed tincidunt ipsum voluptua magna labore eirmod takimata sed. Sed laoreet dolore eu. Aliquam sea consequat rebum dolor amet est kasd et consetetur et vel velit sanctus eirmod tation elitr.
+
+    Minim eirmod euismod sea labore labore tincidunt dolore et diam rebum gubergren adipiscing rebum est ex vel eirmod duo. Nulla mazim stet et clita facer vulputate duis consectetuer feugiat sanctus dolore. Dolore nonumy rebum consetetur amet et eu eirmod justo accusam et facilisi labore et dolore adipiscing accumsan. Et vero vero gubergren justo nulla iriure vel exerci consetetur in. Nisl praesent ea clita nonumy vero elitr. Qui ipsum sea aliquyam lorem tempor eum gubergren sed at quod. Clita vero tempor nulla invidunt et ea aliquyam magna tempor lorem ut duis at enim tempor kasd iusto. Sea sea justo et veniam et nostrud ut luptatum labore et ex lorem aliquam ut wisi. Minim tempor et invidunt velit odio ut et. Eos dolore nulla cum. Lorem diam dolor ut et elitr sed diam quis iriure dolore soluta sanctus tempor dolore. Ea et at invidunt nam eos lorem sed ipsum accusam et consectetuer facilisis sadipscing consetetur sed. Consetetur labore dolor vulputate labore ut laoreet in takimata amet sit tempor accusam ut praesent consequat elit. Stet eos praesent enim id placerat est dolore accusam gubergren eos exerci praesent luptatum dolor est kasd.
+
+    m diam dolor ut et elitr sed diam quis iriure dolore soluta sanctus tempor dolore. Ea et at invidunt nam eos lorem sed ipsum accusam et consectetuer facilisis sadipscing consetetur sed. Consetetur labore dolor vulputate labore ut laoreet in takimata amet sit tempor accusam ut praesent consequat elit. Stet eos praesent enim id placerat est dolore accusam gubergren eos exerci praesent luptatum dolor est kasd.
+
+  </p>
+
+  <p class="second-lorem">
+    Magna diam placerat accusam lorem invidunt congue illum sit dolor ut duo lorem. Rebum amet imperdiet invidunt clita delenit vero sea dolores blandit illum exerci diam ullamcorper mazim justo ut. Nulla magna rebum cum. Et delenit voluptua sed et nonumy ex clita. Eos minim takimata vulputate at iriure stet ipsum labore.
+
+    Nonumy amet voluptua nulla eirmod. Voluptua et lobortis esse. Autem kasd elitr eirmod ullamcorper sanctus clita. Amet eirmod dolores nonumy nonumy feugait duo est consetetur kasd velit et dolor. Nulla rebum accusam tempor nibh diam. Stet ipsum ea. Zzril dolore amet amet invidunt. Sea sed dolor. Imperdiet sed congue aliquam. Accusam labore dolore eos duo sed voluptua sit ipsum clita duo wisi congue aliquyam sed dolore sed.
+
+    Exerci tincidunt et consetetur sea at erat eirmod ipsum duo dolor iriure dolor amet accusam. Kasd ea ipsum autem molestie eirmod magna sadipscing et justo diam gubergren ipsum. Diam dolores vulputate kasd rebum duis lorem nonumy sed ipsum eirmod lorem lobortis. Sanctus et amet erat diam sed labore vero dolore duo magna qui kasd erat gubergren eirmod nonumy. Accusam ipsum quis magna blandit voluptua ut vero tempor accusam accumsan lorem gubergren illum. Duis invidunt rebum sea duo praesent lorem dolores lorem labore accusam molestie augue consectetuer et. Dolor gubergren tempor sed et vulputate voluptua ipsum ut amet diam elitr stet amet et sea justo est stet. Dolor magna est. Ipsum dignissim lorem et sit et sed.
+
+    Elitr lobortis hendrerit et duis erat et kasd kasd et ipsum magna erat lorem ea duo rebum et elitr. Diam dolore et tincidunt labore amet et nonumy. Accusam consetetur elitr aliquyam et et veniam sit praesent dignissim voluptua. Dolore tempor elitr dolor hendrerit mazim dolores. Clita dolore dolor lorem aliquam diam kasd amet ea dolor ipsum kasd sea veniam possim dolor sed. Ipsum et aliquam facer dolor ad kasd et erat sit nihil et stet accusam sit eirmod ipsum. Amet elitr at esse gubergren at dolore amet eu ea quod dolor wisi amet. Diam velit lorem. Accusam ut magna dolores imperdiet eu ea nonumy veniam sed aliquip. Justo veniam magna nihil ut placerat vulputate sea clita kasd invidunt vel amet ipsum consetetur. Nisl commodo at eu amet veniam et ut ex voluptua. Sanctus consetetur volutpat duo et amet vulputate vero suscipit dolores wisi nonumy vel dolor et dolore te lorem duo. Lorem invidunt invidunt ex rebum lorem vel placerat laoreet sit ut consetetur. Exerci illum ad diam sadipscing ipsum ut no vero cum dolor eirmod ullamcorper sea delenit diam diam ut et. Suscipit et lorem nonummy dolores est aliquyam enim amet sed ad in odio erat vero. Magna takimata soluta sit dolor ut at enim.
+
+    Elitr lobortis hendrerit et duis erat et kasd kasd et ipsum magna erat lorem ea duo rebum et elitr. Diam dolore et tincidunt labore amet et nonumy. Accusam consetetur elitr aliquyam et et veniam sit praesent dignissim voluptua. Dolore tempor elitr dolor hendrerit mazim dolores. Clita dolore dolor lorem aliquam diam kasd amet ea dolor ipsum kasd sea veniam possim dolor sed. Ipsum et aliquam facer dolor ad kasd et erat sit nihil et stet accusam sit eirmod ipsum. Amet elitr at esse gubergren at dolore amet eu ea quod dolor wisi amet. Diam velit lorem. Accusam ut magna dolores imperdiet eu ea nonumy veniam sed aliquip. Justo veniam magna nihil ut placerat vulputate sea clita kasd invidunt vel amet ipsum consetetur. Nisl commodo at eu amet veniam et ut ex voluptua. Sanctus consetetur volutpat duo et amet vulputate vero suscipit dolores wisi nonumy vel dolor et dolore te lorem duo. Lorem invidunt invidunt ex rebum lorem vel placerat laoreet sit ut consetetur. Exerci illum ad diam sadipscing ipsum ut no vero cum dolor eirmod ullamcorper sea delenit diam diam ut et. Suscipit et lorem nonummy dolores est aliquyam enim amet sed ad in odio erat vero. Magna takimata soluta sit dolor ut at enim.
+
+    Elitr lobortis hendrerit et duis erat et kasd kasd et ipsum magna erat lorem ea duo rebum et elitr. Diam dolore et tincidunt labore amet et nonumy. Accusam consetetur elitr aliquyam et et veniam sit praesent dignissim voluptua. Dolore tempor elitr dolor hendrerit mazim dolores. Clita dolore dolor lorem aliquam diam kasd amet ea dolor ipsum kasd sea veniam possim dolor sed. Ipsum et aliquam facer dolor ad kasd et erat sit nihil et stet accusam sit eirmod ipsum. Amet elitr at esse gubergren at dolore amet eu ea quod dolor wisi amet. Diam velit lorem. Accusam ut magna dolores imperdiet eu ea nonumy veniam sed aliquip. Justo veniam magna nihil ut placerat vulputate sea clita kasd invidunt vel amet ipsum consetetur. Nisl commodo at eu amet veniam et ut ex voluptua.
+  </p>
+
+  <article class="third-lorem">
+    Elitr lobortis hendrerit et duis erat et kasd kasd et ipsum magna erat lorem ea duo rebum et elitr. Diam dolore et tincidunt labore amet et nonumy. Accusam consetetur elitr aliquyam et et veniam sit praesent dignissim voluptua. Dolore tempor elitr dolor hendrerit mazim dolores. Clita dolore dolor lorem aliquam diam kasd amet ea dolor ipsum kasd sea veniam possim dolor sed. Ipsum et aliquam facer dolor ad kasd et erat sit nihil et stet accusam sit eirmod ipsum. Amet elitr at esse gubergren at dolore amet eu ea quod dolor wisi amet. Diam velit lorem. Accusam ut magna dolores imperdiet eu ea nonumy veniam sed aliquip. Justo veniam magna nihil ut placerat vulputate sea clita kasd invidunt vel amet ipsum consetetur. Nisl commodo at eu amet veniam et ut ex voluptua.
+  </article>
+
+  <table>
+    <thead>
+      <tr>
+        <th>index</th>
+        <th>column1</th>
+        <th>column2</th>
+        <th>column3</th>
+        <th>column4</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <img class="dark" src="./pie-custom.png" width="100%"/>
+
+  <script>
+    window.onload = function() {
+      const tbody = Array.from({ length: 50 }, (_, index) => `
+      <tr>
+        <td>${index}</td>
+        <td>column1</td>
+        <td>column2</td>
+        <td>column3</td>
+        <td>column4</td>
+      </tr>
+`).join("")
+      document.querySelector("tbody").insertAdjacentHTML('beforeEnd', tbody)
+
+      document.querySelector("#print-btn").addEventListener("click", function() {
+        window.print();
+      })
+    }
+    </script>
+</body>
